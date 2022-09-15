@@ -2,6 +2,8 @@ import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Login from "./pages/user/Login";
 import SignUp from "./pages/user/SignUp";
 import Main from "./pages/board/Main";
+import Post from "./pages/board/Post";
+import View from "./pages/board/Viex";
 import { useEffect } from "react";
 import axios, { setHeader, removeHeader } from "./api/config";
 import { useRecoilState } from "recoil";
@@ -54,6 +56,8 @@ function App() {
       <Route path="/" element={<Login />}></Route>
       <Route path="/signup" element={<SignUp />}></Route>
       <Route path="/main" element={<Main />}></Route>
+      <Route path="/post" element={<Post />}></Route>
+      <Route path="/view/:id" element={<View />}></Route>
     </Routes>
   );
 }
