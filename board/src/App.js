@@ -56,7 +56,10 @@ function App() {
       <Route path="/" element={<Login />}></Route>
       <Route path="/signup" element={<SignUp />}></Route>
       <Route path="/main" element={<Main />}></Route>
-      <Route path="/post" element={<Post />}></Route>
+      <Route path="/post">
+        <Route index element={<Post />} />
+        <Route path=":id" element={<Post />} />
+      </Route>
       <Route path="/view/:id" element={<View />}></Route>
     </Routes>
   );
